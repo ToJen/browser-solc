@@ -32,8 +32,8 @@
     "babel-plugin-transform-regenerator": "^6.16.1",
     "browserify": "^13.0.0",
     "csslint": "^1.0.2",
-    "es6-shim": "^0.35.1",
-    "solc": "tojen/solc-js#aion_emscripten",
+    "es6-shim": "^0.35.4",
+    "solc": "github:tojen/solc-js#aion_emscripten",
     "yo-yo": "^1.2.2",
     "yo-yoify": "^3.3.0"
   },

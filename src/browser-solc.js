@@ -30,13 +30,16 @@ function loadScript(name, url, callback) {
   document.getElementsByTagName("head")[0].appendChild(script);
 }
 
-function loadVersion(version, callback) {
+function loadVersion(blockchain, version, callback) {
   delete window.Module;
   // NOTE: workaround some browsers
   window.Module = undefined;
 
   var url =
-    "https://cdn.jsdelivr.net/gh/ToJen/solc-js@10b3576573a9cc29153c89dacc90350cee243b75/soljson.aion.js";
+    blockchain === "Ethereum"
+      ? `https://ethereum.github.io/solc-bin/bin/${version}`
+      : "https://cdn.jsdelivr.net/gh/ToJen/solc-js@10b3576573a9cc29153c89dacc90350cee243b75/soljson.aion.js";
+
   loadScript("solc", url, function() {
     var compiler = solc(window.Module);
     callback(compiler);
