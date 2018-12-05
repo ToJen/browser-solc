@@ -21,17 +21,17 @@ You should use browser-solc if you:
 ## Usage:
 
 ```javascript
-import browserSolc from 'browser-solc';
-// After importing, the BrowserSolc will be loaded into the window object. This is required as it was built with browserify.
+import AionBrowserSolc from 'browser-solc';
+// After importing, the AionBrowserSolc will be loaded into the window object. This is required as it was built with browserify.
 
 //Get a list of all possibile solc versions
-BrowserSolc.getVersions(function(soljsonSources, soljsonReleases) {
+AionBrowserSolc.getVersions(function(soljsonSources, soljsonReleases) {
   console.log(soljsonSources);
   console.log(soljsonReleases);
 });
 
 //Load a specific compiler version
-BrowserSolc.loadVersion("soljson-v0.4.6+commit.2dabbdf0.js", function(compiler) {
+AionBrowserSolc.loadVersion("soljson-v0.4.6+commit.2dabbdf0.js", function(compiler) {
   source = 'contract x { function g() {} }';
   optimize = 1;
   result = compiler.compile(source, optimize);

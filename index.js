@@ -13895,7 +13895,7 @@
 
     (function (document, window, domIsReady, undefined) {
       domIsReady(function () {
-        window.BrowserSolc = solc;
+        window.AionBrowserSolc = solc;
       });
     })(document, window, domIsReady);
   }, { "./browser-solc": 56, "es6-shim": 9 }] }, {}, [57]);

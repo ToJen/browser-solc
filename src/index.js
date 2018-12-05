@@ -29,6 +29,6 @@ var domIsReady = (function(domIsReady) {
 
 (function(document, window, domIsReady, undefined) {
    domIsReady(function() {
-      window.BrowserSolc = solc;
+      window.AionBrowserSolc = solc;
    });
 })(document, window, domIsReady);

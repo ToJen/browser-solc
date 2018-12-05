@@ -37,7 +37,7 @@ function solcCompile(compiler) {
 
 function loadSolcVersion() {
     status("Loading Solc: " + getVersion());
-    BrowserSolc.loadVersion(getVersion(), function(c) {
+    AionBrowserSolc.loadVersion(getVersion(), function(c) {
         compiler = c;
         console.log("Solc Version Loaded: " + getVersion());
         status("Solc loaded.  Compiling...");
@@ -50,13 +50,13 @@ window.onload = function() {
 
     document.getElementById("versions").onchange = loadSolcVersion;
 
-    if (typeof BrowserSolc == 'undefined') {
+    if (typeof AionBrowserSolc == 'undefined') {
         console.log("You have to load browser-solc.js in the page.  We recommend using a <script> tag.");
         throw new Error();
     }
 
     status("Loading Compiler");
-    BrowserSolc.getVersions(function(soljsonSources, soljsonReleases) {
+    AionBrowserSolc.getVersions(function(soljsonSources, soljsonReleases) {
         populateVersions(soljsonSources);
 
         document.getElementById("versions").value = soljsonReleases["0.4.5"];
