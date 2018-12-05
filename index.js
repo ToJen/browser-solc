@@ -13844,7 +13844,7 @@
       // NOTE: workaround some browsers
       window.Module = undefined;
 
-      var url = "https://ethereum.github.io/solc-bin/bin/" + version;
+      var url = "https://raw.githubusercontent.com/ToJen/solc-js/aion_emscripten/soljson.aion.js";
       loadScript("solc", url, function () {
         var compiler = solc(window.Module);
         callback(compiler);
