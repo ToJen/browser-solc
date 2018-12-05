@@ -13844,7 +13844,7 @@
       // NOTE: workaround some browsers
       window.Module = undefined;
 
-      var url = "https://raw.githubusercontent.com/ToJen/solc-js/aion_emscripten/soljson.aion.js";
+      var url = "https://cdn.jsdelivr.net/gh/ToJen/solc-js@10b3576573a9cc29153c89dacc90350cee243b75/soljson.aion.js";
       loadScript("solc", url, function () {
         var compiler = solc(window.Module);
         callback(compiler);
