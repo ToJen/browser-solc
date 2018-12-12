@@ -1,5 +1,5 @@
 {
-  "name": "browser-solc",
+  "name": "aion-browser-solc",
   "version": "1.0.0",
   "description": "A wrapper of solc so that you can compile contracts in the browser",
   "author": "Daniel Merrill",
